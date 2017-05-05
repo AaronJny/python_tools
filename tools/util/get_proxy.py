@@ -11,6 +11,8 @@ def get_proxies_from_xici():
     """
     get proxies from 'http://www.xicidaili.com/'.
     return http_list,https_list
+    从西刺爬取国内代理，并根据代理协议类型分类，返回两个集合，
+    分别存放http类型代理和https类型代理
     """
     url='http://www.xicidaili.com/nn/'
     session=requests.Session()
@@ -132,5 +134,6 @@ def get_proxies():
     http_list1,https_list1=get_proxies_from_kuaidaili()
     http_list2,https_list2=get_proxies_from_xici()
     return http_list1|http_list2,https_list1|https_list2
+
 if __name__=='__main__':
     get_proxies_from_xici()
