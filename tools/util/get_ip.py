@@ -97,5 +97,6 @@ def main():
             sprint(u'暂停10秒')
             time.sleep(10)
         
+        
 if __name__=='__main__':
     main()
